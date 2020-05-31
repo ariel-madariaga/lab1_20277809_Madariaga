@@ -2,6 +2,8 @@
 ;---exportacion de funcion---
 
 (provide verificar)
+(require "TDA_Commit.rkt")
+(require "TDA_Zonas.rkt")
 
 ;------funcion para la funcion pull-------:
 

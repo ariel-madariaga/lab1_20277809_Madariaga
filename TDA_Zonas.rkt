@@ -4,7 +4,6 @@
 (provide construcZonas)
 (provide zonas2)
 (provide zonas)
-(provide lista?)
 (provide workspace)
 (provide index)
 (provide localRepository)
@@ -15,25 +14,17 @@
 ;-----representacion-----:
 
 ;(list (list (string (...)) list(string (...)) list(string (...)) list(string (...)))
-;la primera lista de string se representara como el workspace, la segunda el index, la tercera el localRepository y la cuarta el remoteRepository.
+;la primera lista de string se representara como el workspace, la segunda como el index, la tercera como el localRepository y la cuarta como el remoteRepository.
 ; Los (...) se refiere a posibles mas string en la lista.
 
 ;zonas se definira como una constante que puede tener contenido (strings) o puede estar vacia.
 ;con los modificadores y constructores se podra manipular.
 
-(define zonas (list '() '() '() '()))
+(define zonas (list (list) (list) (list) (list)))
 
 ;-----pertenencia-----:
 
-;descripcion: verificar si pertenece a una lista.
-;dominio: lista de elementos.
-;recorrido: booleano.
-;tipo de recursion: no tiene.
-
-(define (lista? lista)
-  (if(list? lista)
-     #t
-     #f))
+;no tiene.
 
 ;-----constructores-----:
 
@@ -46,9 +37,7 @@
 (define construcZonas (lambda  (listas)
                         (if (null? listas)
                             (list)
-                            (if (lista? (car listas))
-                                (list)
-                                (cons (car listas) (construcZonas (cdr listas)))))))
+                            (cons (car listas) (construcZonas (cdr listas))))))
 
 
 
