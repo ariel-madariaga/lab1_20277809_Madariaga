@@ -20,7 +20,7 @@
 ;zonas se definira como una constante que puede tener contenido (strings) o puede estar vacia.
 ;con los modificadores y constructores se podra manipular.
 
-(define zonas (list (list "file") (list "file3") (list "micommit" (list "file4" "file8")) (list "micommit2"(list "file5" "file7"))))
+(define zonas (list (list) (list) (list) (list)))
 
 ;-----pertenencia-----:
 
